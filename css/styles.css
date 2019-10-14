@@ -66,6 +66,14 @@ background-image: linear-gradient(to bottom, #333399, #fe00cc);
     margin: 3em 0;
 }
 
+.section--juri{
+    background-color: #ffe9eb;
+    color: #444444;
+    font-weight: 400;
+}
+
+
+
 .cover{
 height: 100vh;
 color: #fff;
@@ -308,6 +316,11 @@ vertical-align: top;
     transform: translate(-50%, -50%);
     width: 100%;
     border-radius: 10px;
+}
+
+.user__img--circle{
+   
+    border-radius: 50%;
 }
 
 .user__name{
