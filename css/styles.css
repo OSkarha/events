@@ -127,6 +127,27 @@ color: #fff;
     background-color: transparent;
 }
 
+.btn--sharp{
+border-radius: 0;
+}
+
+
+.btn--dark:hover,
+.btn--dark:focus,
+.btn--dark:active{
+    color: #555;
+    border-color: #555;
+}
+
+.btn--dark{
+background-color: #555;
+border-color: #555;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 1.2rem;
+font-weight: 400;
+}
+
 .btn--transparent:hover,
 .btn--transparent:focus,
 .btn--transparent:active{
@@ -234,6 +255,10 @@ header{
     text-align: center;
 }
 
+.text-right{
+    text-align: right;
+}
+
 
 /*Courses*/
 .courses{
@@ -333,8 +358,6 @@ vertical-align: top;
     width: 100%;
     border-radius: 10px;
 }
-
-
 
 .user__name{
     font-weight: 800;
@@ -480,23 +503,28 @@ footer{
 .form-contact{
     max-width: 650px;
     margin: 0 auto;
-    outline: 1px solid red;
+    
 }
 
 .form-contact__input{
     display: inline-block;
     width: 100%;
     border: none;
-    border-bottom: 4px solid #000;
+    border-bottom: 2px solid #000;
     transition: all .25s ease-in;
     padding: 15px 0;
+    font-size: 1.6rem;
 
 }
 
-.form-contact__input:focus{
+textarea.form-contact__input{
+    resize: none;
+}
+
+.form-contact__input:focus
+.form-contact__input.filld{
     outline: none;
-    border-bottom: 2px solid #000;
-    background-color: transparent;
+    border-color: transparent;
 }
 
 .form-contact__label{
@@ -508,19 +536,32 @@ footer{
     padding: 15px 0;
 }
 
-.form-contact__input:focus + .form-contact__label{
-    transform: translate(0, 0);
+.form-contact__input:focus + .form-contact__label,
+.form-contact__input.filld + .form-contact__label{
+    transform: translate(0, -20%);
+    z-index: 1;
 }
 
 
 .row{
     display: flex;
     justify-content: space-between;
-    outline: 1px solid blue;
+    margin-top: 20px;
+}
+
+.row-right{
+justify-content: flex-end;
 }
 
 .col{
-    width: calc(50%-15px);
-    outline: 1px solid green;
+    width: calc(50% - 15px);
+    /* outline: 1px solid green; */
     position: relative;
+    border-bottom: 2px solid black;
+    font-size: 0;
+}
+
+.col--lg{
+    width: 100%;
+
 }

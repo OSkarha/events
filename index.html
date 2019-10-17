@@ -182,13 +182,8 @@
                         </ul>
                     </div>
                 </section>
-                
-                
-                
-                
-                
-                
-                <section class="section section--bg-pink">
+<section class="section section--bg-pink">
+
                     <div class="text-center">
                         <h2 class="section__title">Juri 2017</h2>
                     </div>                    
@@ -224,15 +219,37 @@
 
                         <form action="" method="POST" name="contacts" class="form-contact" autocomplete="off">
                             <div class="row">
-                                <div class="col"><input class="form-contact__input" type="text" name="firstname" id="firstname">
-                                <label class="form-contact__label" for="firstname">First tname</label>
+                                <div class="col"><input required class="form-contact__input" type="text" name="firstname" id="firstname">
+                                    <label class="form-contact__label" for="firstname">First tname</label>
                                 </div>
-                                <div class="col"><input class="form-contact__input" type="text" name="lastname" id="lastname">
+                                <div class="col"><input required class="form-contact__input" type="text" name="lastname" id="lastname">
                                     <label class="form-contact__label" for="lastname">Last name</label>
-                                    </div>
-
-                                    
+                                </div>                              
                             </div>
+
+                            <div class="row">
+                                <div class="col"><input required class="form-contact__input" type="email" name="email" id="email">
+                                     <label class="form-contact__label" for="email">email</label>
+                                </div>
+                                <div class="col"><input required class="form-contact__input" type="url" name="site" id="site">
+                                    <label class="form-contact__label" for="site">Web site</label>
+                                </div>                                   
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col col--lg">
+                                    <textarea class="form-contact__input" type="message" name="message" rows="7"></textarea> </textarea>
+                                    <label class="form-contact__label" for="message">message</label>
+                                </div>
+                            </div>
+
+                            <div class="row row-right">
+                                <button type="submit" class="btn btn--dark btn--sharp">Send message</button>
+                            </div>
+
+
                         </form>
 
 
@@ -274,5 +291,17 @@
         </footer>
     
         <script src="https://kit.fontawesome.com/cbcc80d199.js" crossorigin="anonymous"></script>
-</body>
+        <script>
+            let inputs = document.querySelectorAll('.form-contact__input');
+
+            inputs.forEach(function(input) {
+                input.addEventListener('change', function(){
+                    
+                    if(this.value.length > 0) {
+                        this.classList.add('filld')
+                    }
+                })
+            })
+        </script>
+    </body>
 </html>
